@@ -8,7 +8,7 @@ import com.site.game.sanguo.api.Game;
 import com.site.game.sanguo.model.Farm;
 import com.site.game.sanguo.model.Model;
 import com.site.game.sanguo.thread.handler.building.Building;
-import com.site.wdbc.http.Session;
+import org.unidal.wdbc.http.Session;
 
 public class ThreadContext {
    private Session m_session;

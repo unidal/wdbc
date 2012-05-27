@@ -3,8 +3,8 @@ package com.site.game.sanguo.thread.wdbc.filter;
 import java.text.MessageFormat;
 import java.text.ParseException;
 
-import com.site.wdbc.WdbcResult;
-import com.site.wdbc.query.DefaultWdbcFilter;
+import org.unidal.wdbc.WdbcResult;
+import org.unidal.wdbc.query.DefaultWdbcFilter;
 
 public class MapStatusFilter extends DefaultWdbcFilter {
    private MessageFormat m_format = new MessageFormat(

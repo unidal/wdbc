@@ -1,12 +1,12 @@
 package com.site.game.sanguo.thread.wdbc;
 
 import com.site.lookup.ComponentTestCase;
-import com.site.wdbc.ResourceSource;
-import com.site.wdbc.WdbcEngine;
-import com.site.wdbc.WdbcQuery;
-import com.site.wdbc.WdbcResult;
-import com.site.wdbc.WdbcSource;
-import com.site.wdbc.WdbcSourceType;
+import org.unidal.wdbc.ResourceSource;
+import org.unidal.wdbc.WdbcEngine;
+import org.unidal.wdbc.WdbcQuery;
+import org.unidal.wdbc.WdbcResult;
+import org.unidal.wdbc.WdbcSource;
+import org.unidal.wdbc.WdbcSourceType;
 
 public class FindQueryTest extends ComponentTestCase {
    public void testBuildingDetail() throws Exception {

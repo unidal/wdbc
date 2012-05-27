@@ -8,7 +8,7 @@ import org.codehaus.plexus.logging.LoggerManager;
 
 import com.site.lookup.configuration.Component;
 import com.site.lookup.logger.TimedConsoleLoggerManager;
-import com.site.wdbc.http.configuration.AbstractWdbcComponentsConfigurator;
+import org.unidal.wdbc.http.configuration.AbstractWdbcComponentsConfigurator;
 
 public class PlexusConfigurator extends AbstractWdbcComponentsConfigurator {
    public static void main(String[] args) {

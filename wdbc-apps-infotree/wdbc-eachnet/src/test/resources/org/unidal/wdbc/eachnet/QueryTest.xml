@@ -1,0 +1,18 @@
+<plexus>
+	<components>
+		<component>
+			<role>org.unidal.wdbc.query.WdbcFilter</role>
+			<role-hint>list</role-hint>
+			<implementation>org.unidal.wdbc.eachnet.ListFilter</implementation>
+         <configuration>
+            <minHours>0</minHours>
+            <maxDays>9999</maxDays>
+         </configuration>
+         <requirements>
+            <requirement>
+               <role>org.unidal.wdbc.eachnet.Configuration</role>
+            </requirement>
+         </requirements>
+		</component>
+	</components>
+</plexus>

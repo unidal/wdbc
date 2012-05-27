@@ -32,9 +32,9 @@ public class CustomizedBuildingPlan extends AbstractBuildingPlan implements Init
    }
 
    /**
-    * ¶«±±á®=>ÖÐ¾üÕÊ:1,±øÉá:3
+    * ï¿½ï¿½ï¿½ï¿½ï¿½=>ï¿½Ð¾ï¿½ï¿½ï¿½:1,ï¿½ï¿½ï¿½ï¿½:3
     * 
-    * ±±á®=>ÖÐ¾üÕÊ:1,±øÉá:5
+    * ï¿½ï¿½ï¿½=>ï¿½Ð¾ï¿½ï¿½ï¿½:1,ï¿½ï¿½ï¿½ï¿½:5
     */
    public void initialize() throws InitializationException {
       String plan = m_configuration.getBuildPlan().trim();

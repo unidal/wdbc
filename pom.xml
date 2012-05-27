@@ -3,7 +3,7 @@
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
    <modelVersion>4.0.0</modelVersion>
-   <groupId>com.site.wdbc</groupId>
+   <groupId>org.unidal.wdbc</groupId>
    <artifactId>default</artifactId>
    <version>1.0.0</version>
    <name>WDBC</name>
@@ -34,17 +34,17 @@
             <version>1.0.0</version>
          </dependency>
          <dependency>
-            <groupId>com.site.wdbc</groupId>
+            <groupId>org.unidal.wdbc</groupId>
             <artifactId>wdbc-api</artifactId>
             <version>${project.version}</version>
          </dependency>
          <dependency>
-            <groupId>com.site.wdbc</groupId>
+            <groupId>org.unidal.wdbc</groupId>
             <artifactId>wdbc-engine-default</artifactId>
             <version>${project.version}</version>
          </dependency>
          <dependency>
-            <groupId>com.site.wdbc</groupId>
+            <groupId>org.unidal.wdbc</groupId>
             <artifactId>wdbc-http-client</artifactId>
             <version>${project.version}</version>
          </dependency>

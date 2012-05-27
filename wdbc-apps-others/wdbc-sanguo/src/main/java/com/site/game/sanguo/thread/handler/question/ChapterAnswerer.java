@@ -40,7 +40,7 @@ public class ChapterAnswerer implements Answerer, Initializable {
    }
 
    public boolean canAnswer(String question) {
-      return question.contains("ÊÇÈý¹úÑÝÒåµÚ¼¸»Ø");
+      return question.contains("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¼ï¿½ï¿½ï¿½");
    }
 
    private String getIdByWrongChapterName(String part1, String part2) {

@@ -1,0 +1,28 @@
+<plexus>
+	<components>
+		<component>
+			<role>org.unidal.wdbc.WdbcQuery</role>
+			<role-hint>result-set</role-hint>
+			<implementation>org.unidal.wdbc.SelectQuery</implementation>
+			<configuration>
+				<paths>
+					<path name="id">-</path>
+					<path name="link">ul[*].li[*].h2.a.@href</path>
+					<path name="given-name">ul[*].li[*].h2.a.span.span</path>
+					<path name="family-name">ul[*].li[*].h2.a.span.span[2]</path>
+				</paths>
+			</configuration>
+         <requirements>
+            <requirement>
+               <role>org.unidal.wdbc.query.WdbcFilter</role>
+			      <role-hint>result-set</role-hint>
+            </requirement>
+         </requirements>
+		</component>
+		<component>
+			<role>org.unidal.wdbc.query.WdbcFilter</role>
+			<role-hint>result-set</role-hint>
+			<implementation>org.unidal.wdbc.linkedin.ResultSetFilter</implementation>
+		</component>
+	</components>
+</plexus>

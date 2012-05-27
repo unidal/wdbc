@@ -1,8 +1,8 @@
 <plexus>
 	<components>
 		<component>
-			<role>com.site.wdbc.http.Session</role>
-			<implementation>com.site.wdbc.http.impl.DefaultSession</implementation>
+			<role>org.unidal.wdbc.http.Session</role>
+			<implementation>org.unidal.wdbc.http.impl.DefaultSession</implementation>
 			<configuration>
 				<headers>
 					<header name="User-Agent">Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; Maxthon; .NET CLR 1.1.4322)</header>
@@ -10,24 +10,24 @@
 			</configuration>
 		</component>
       <component>
-         <role>com.site.wdbc.kijiji.Configuration</role>
-         <implementation>com.site.wdbc.kijiji.Configuration</implementation>
+         <role>org.unidal.wdbc.kijiji.Configuration</role>
+         <implementation>org.unidal.wdbc.kijiji.Configuration</implementation>
          <configuration>
             <config>config.xml</config>
          </configuration>
       </component>
 		<component>
-			<role>com.site.wdbc.http.Processor</role>
-			<implementation>com.site.wdbc.kijiji.Processor</implementation>
+			<role>org.unidal.wdbc.http.Processor</role>
+			<implementation>org.unidal.wdbc.kijiji.Processor</implementation>
          <requirements>
             <requirement>
-               <role>com.site.wdbc.kijiji.Configuration</role>
+               <role>org.unidal.wdbc.kijiji.Configuration</role>
             </requirement>
          </requirements>
 		</component>
 		<component>
-			<role>com.site.wdbc.http.Flow</role>
-			<implementation>com.site.wdbc.http.impl.DefaultFlow</implementation>
+			<role>org.unidal.wdbc.http.Flow</role>
+			<implementation>org.unidal.wdbc.http.impl.DefaultFlow</implementation>
          <configuration>
             <handler query="page-links" interval="2">
                <page name="list"/>
@@ -43,25 +43,25 @@
          </configuration>
 		</component>
 		<component>
-			<role>com.site.wdbc.http.Request</role>
+			<role>org.unidal.wdbc.http.Request</role>
 			<role-hint>list</role-hint>
-			<implementation>com.site.wdbc.http.impl.FormRequest</implementation>
+			<implementation>org.unidal.wdbc.http.impl.FormRequest</implementation>
 			<configuration>
 				<action>${page-links:link}</action>
 			</configuration>
 		</component>
 		<component>
-			<role>com.site.wdbc.http.Request</role>
+			<role>org.unidal.wdbc.http.Request</role>
 			<role-hint>details</role-hint>
-			<implementation>com.site.wdbc.http.impl.FormRequest</implementation>
+			<implementation>org.unidal.wdbc.http.impl.FormRequest</implementation>
 			<configuration>
 				<action>http://shanghai.baixing.com${list:link}</action>
 			</configuration>
 		</component>
 		<component>
-			<role>com.site.wdbc.WdbcQuery</role>
+			<role>org.unidal.wdbc.WdbcQuery</role>
 			<role-hint>page-links</role-hint>
-			<implementation>com.site.wdbc.kijiji.PageLinksQuery</implementation>
+			<implementation>org.unidal.wdbc.kijiji.PageLinksQuery</implementation>
          <configuration>
             <uriPattern>
                <![CDATA[
@@ -71,14 +71,14 @@
          </configuration>
          <requirements>
             <requirement>
-               <role>com.site.wdbc.kijiji.Configuration</role>
+               <role>org.unidal.wdbc.kijiji.Configuration</role>
             </requirement>
          </requirements>
 		</component>
 		<component>
-			<role>com.site.wdbc.WdbcQuery</role>
+			<role>org.unidal.wdbc.WdbcQuery</role>
 			<role-hint>list</role-hint>
-			<implementation>com.site.wdbc.SelectQuery</implementation>
+			<implementation>org.unidal.wdbc.SelectQuery</implementation>
 			<configuration>
 				<paths>
 					<path name="link">div[8].div[*].h2.a.@href</path>
@@ -88,15 +88,15 @@
 			</configuration>
          <requirements>
             <requirement>
-               <role>com.site.wdbc.query.WdbcFilter</role>
+               <role>org.unidal.wdbc.query.WdbcFilter</role>
                <role-hint>list</role-hint>
             </requirement>
          </requirements>
 		</component>
 		<component>
-			<role>com.site.wdbc.WdbcQuery</role>
+			<role>org.unidal.wdbc.WdbcQuery</role>
 			<role-hint>picture</role-hint>
-			<implementation>com.site.wdbc.SelectQuery</implementation>
+			<implementation>org.unidal.wdbc.SelectQuery</implementation>
 			<configuration>
 				<paths>
 					<path name="link">html.body.div[2].div[3].div.ul.li.a.img.@src</path>
@@ -104,9 +104,9 @@
 			</configuration>
 		</component>
 		<component>
-			<role>com.site.wdbc.WdbcQuery</role>
+			<role>org.unidal.wdbc.WdbcQuery</role>
 			<role-hint>contact</role-hint>
-			<implementation>com.site.wdbc.SelectQuery</implementation>
+			<implementation>org.unidal.wdbc.SelectQuery</implementation>
 			<configuration>
 				<paths>
 					<path name="contact">-</path>
@@ -122,30 +122,30 @@
 			</configuration>
          <requirements>
             <requirement>
-               <role>com.site.wdbc.query.WdbcFilter</role>
+               <role>org.unidal.wdbc.query.WdbcFilter</role>
                <role-hint>contact</role-hint>
             </requirement>
          </requirements>
 		</component>
 		<component>
-			<role>com.site.wdbc.query.WdbcFilter</role>
+			<role>org.unidal.wdbc.query.WdbcFilter</role>
 			<role-hint>list</role-hint>
-			<implementation>com.site.wdbc.kijiji.ListFilter</implementation>
+			<implementation>org.unidal.wdbc.kijiji.ListFilter</implementation>
          <requirements>
             <requirement>
-               <role>com.site.wdbc.kijiji.Configuration</role>
+               <role>org.unidal.wdbc.kijiji.Configuration</role>
             </requirement>
          </requirements>
 		</component>
 		<component>
-			<role>com.site.wdbc.query.WdbcFilter</role>
+			<role>org.unidal.wdbc.query.WdbcFilter</role>
 			<role-hint>contact</role-hint>
-			<implementation>com.site.wdbc.kijiji.ContactFilter</implementation>
+			<implementation>org.unidal.wdbc.kijiji.ContactFilter</implementation>
 		</component>
 		<component>
-			<role>com.site.wdbc.WdbcQuery</role>
+			<role>org.unidal.wdbc.WdbcQuery</role>
 			<role-hint>details</role-hint>
-			<implementation>com.site.wdbc.SelectQuery</implementation>
+			<implementation>org.unidal.wdbc.SelectQuery</implementation>
 			<configuration>
 				<paths>
 					<path name="label">html.body.div[2].div[3].div.address</path>
@@ -163,15 +163,15 @@
 			</configuration>
          <requirements>
             <requirement>
-               <role>com.site.wdbc.query.WdbcFilter</role>
+               <role>org.unidal.wdbc.query.WdbcFilter</role>
                <role-hint>details</role-hint>
             </requirement>
          </requirements>
 		</component>
 		<component>
-			<role>com.site.wdbc.query.WdbcFilter</role>
+			<role>org.unidal.wdbc.query.WdbcFilter</role>
 			<role-hint>details</role-hint>
-			<implementation>com.site.wdbc.kijiji.DetailsFilter</implementation>
+			<implementation>org.unidal.wdbc.kijiji.DetailsFilter</implementation>
 		</component>   
 	</components>
 </plexus>

@@ -20,10 +20,10 @@ import com.site.game.sanguo.thread.ThreadHelper;
 import com.site.game.sanguo.thread.handler.general.General;
 import com.site.game.sanguo.thread.handler.general.TaskEvaluator;
 import com.site.game.sanguo.thread.wdbc.WdbcFetcher;
-import com.site.wdbc.WdbcException;
-import com.site.wdbc.WdbcResult;
-import com.site.wdbc.http.Request;
-import com.site.wdbc.http.Session;
+import org.unidal.wdbc.WdbcException;
+import org.unidal.wdbc.WdbcResult;
+import org.unidal.wdbc.http.Request;
+import org.unidal.wdbc.http.Session;
 
 public class GeneralHandler implements ThreadHandler, LogEnabled {
    private WdbcFetcher m_wdbcFetcher;
@@ -50,7 +50,7 @@ public class GeneralHandler implements ThreadHandler, LogEnabled {
       try {
          ThreadHelper.executeRequest(session, m_startStateRequest, true);
 
-         task.setStatus("ÒÑ½ÓÊÜ");
+         task.setStatus("ï¿½Ñ½ï¿½ï¿½ï¿½");
 
          for (Soldier soldier : ctx.getFarm().getSoldiers()) {
             if (soldier.getTypeId() == 100 && soldier.getId() == general.getId()) {
@@ -118,7 +118,7 @@ public class GeneralHandler implements ThreadHandler, LogEnabled {
    private void executeTask(ThreadContext ctx, General general) throws HttpException, IOException, ThreadException,
          XmlException, WdbcException {
       for (StateTask task : ctx.getFarm().getStateTasks()) {
-         if (task.getStatus().equals("Î´½ÓÊÜ") && m_taskEvaluator.evaluate(general, task)) {
+         if (task.getStatus().equals("Î´ï¿½ï¿½ï¿½ï¿½") && m_taskEvaluator.evaluate(general, task)) {
             Equipment oldEquipment = getEquipment(ctx, general);
 
             if (oldEquipment != null) {

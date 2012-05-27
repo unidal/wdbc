@@ -13,7 +13,7 @@ import com.site.game.sanguo.Configuration;
 import com.site.game.sanguo.model.Colonia;
 import com.site.game.sanguo.thread.ThreadContext;
 import com.site.game.sanguo.thread.wdbc.WdbcFetcher;
-import com.site.wdbc.WdbcResult;
+import org.unidal.wdbc.WdbcResult;
 
 public class RangedColoniaManager implements ColoniaManager, LogEnabled {
    private Configuration m_configuration;

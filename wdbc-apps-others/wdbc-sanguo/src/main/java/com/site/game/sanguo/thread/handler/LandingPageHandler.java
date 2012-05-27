@@ -11,8 +11,8 @@ import com.site.game.sanguo.thread.ThreadContext;
 import com.site.game.sanguo.thread.ThreadException;
 import com.site.game.sanguo.thread.ThreadHandler;
 import com.site.game.sanguo.thread.ThreadHelper;
-import com.site.wdbc.http.Request;
-import com.site.wdbc.http.Session;
+import org.unidal.wdbc.http.Request;
+import org.unidal.wdbc.http.Session;
 
 public class LandingPageHandler implements ThreadHandler, LogEnabled {
    private Configuration m_configuration;

@@ -1,0 +1,17 @@
+<plexus>
+	<components>
+		<component>
+			<role>org.unidal.wdbc.query.WdbcFilter</role>
+			<role-hint>list</role-hint>
+			<implementation>org.unidal.wdbc.n51job.ListFilter</implementation>
+         <configuration>
+            <maxDays>9999</maxDays>
+         </configuration>
+         <requirements>
+            <requirement>
+               <role>org.unidal.wdbc.n51job.Configuration</role>
+            </requirement>
+         </requirements>
+		</component>
+	</components>
+</plexus>

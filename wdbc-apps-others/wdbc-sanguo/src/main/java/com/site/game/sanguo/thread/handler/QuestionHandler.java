@@ -17,8 +17,8 @@ import com.site.game.sanguo.thread.ThreadException;
 import com.site.game.sanguo.thread.ThreadHandler;
 import com.site.game.sanguo.thread.ThreadHelper;
 import com.site.game.sanguo.thread.handler.question.Answerer;
-import com.site.wdbc.http.Request;
-import com.site.wdbc.http.Session;
+import org.unidal.wdbc.http.Request;
+import org.unidal.wdbc.http.Session;
 
 public class QuestionHandler implements ThreadHandler, LogEnabled {
    private List<Answerer> m_answerers;
@@ -27,7 +27,7 @@ public class QuestionHandler implements ThreadHandler, LogEnabled {
 
    private Logger m_logger;
 
-   private MessageFormat m_format = new MessageFormat("{0}ÄúµÄ»Ø´ðÕýÈ· {1}<{2}");
+   private MessageFormat m_format = new MessageFormat("{0}ï¿½ï¿½Ä»Ø´ï¿½ï¿½ï¿½È· {1}<{2}");
 
    private boolean answerQuestion(ThreadContext ctx, Question question, int result) throws ThreadException {
       Session session = ctx.getSession();

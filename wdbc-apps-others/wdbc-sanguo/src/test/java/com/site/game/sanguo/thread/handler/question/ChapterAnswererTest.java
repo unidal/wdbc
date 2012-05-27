@@ -6,7 +6,7 @@ public class ChapterAnswererTest extends ComponentTestCase {
    public void testAnswer() throws Exception {
       Answerer answerer = lookup(Answerer.class, "chapter");
 
-      assertTrue(answerer.canAnswer("ÍÍÍÁÉ½¹Ø¹«Ô¼ÈıÊÂ ¾È°×Âí²Ü²Ù½âÖØÎ§ ÊÇÈı¹úÑİÒåµÚ¼¸»Ø"));
-      assertEquals(2, answerer.answer("ÍÍÍÁÉ½¹Ø¹«Ô¼ÈıÊÂ ¾È°×Âí²Ü²Ù½âÖØÎ§ ÊÇÈı¹úÑİÒåµÚ¼¸»Ø", new String[] { "24", "25", "26", "27" }));
+      assertTrue(answerer.canAnswer("ï¿½ï¿½ï¿½ï¿½É½ï¿½Ø¹ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ ï¿½È°ï¿½ï¿½ï¿½Ü²Ù½ï¿½ï¿½ï¿½Î§ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¼ï¿½ï¿½ï¿½"));
+      assertEquals(2, answerer.answer("ï¿½ï¿½ï¿½ï¿½É½ï¿½Ø¹ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ ï¿½È°ï¿½ï¿½ï¿½Ü²Ù½ï¿½ï¿½ï¿½Î§ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¼ï¿½ï¿½ï¿½", new String[] { "24", "25", "26", "27" }));
    }
 }

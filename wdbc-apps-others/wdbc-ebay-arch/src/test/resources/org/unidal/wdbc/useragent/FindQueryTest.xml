@@ -1,0 +1,15 @@
+<plexus>
+   <components>
+      <component>
+         <role>org.unidal.wdbc.WdbcQuery</role>
+         <role-hint>list</role-hint>
+         <implementation>org.unidal.wdbc.FindQuery</implementation>
+         <configuration>
+            <words>
+               <word name="text">ABrowse</word>
+               <word name="text">50727</word>
+            </words>
+         </configuration>
+      </component>
+   </components>
+</plexus>

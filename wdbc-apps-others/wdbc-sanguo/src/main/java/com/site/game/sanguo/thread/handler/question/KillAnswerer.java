@@ -33,7 +33,7 @@ public class KillAnswerer implements Answerer, Initializable {
    }
 
    public boolean canAnswer(String question) {
-      return question.contains("±»ºÎÈËËùÉ±") || question.contains("±»ºÎÈËËùÇÜ");
+      return question.contains("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É±") || question.contains("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
    }
 
    public void initialize() throws InitializationException {

@@ -3,8 +3,8 @@ package com.site.game.sanguo.thread.wdbc.filter;
 import java.text.MessageFormat;
 import java.text.ParseException;
 
-import com.site.wdbc.WdbcResult;
-import com.site.wdbc.query.DefaultWdbcFilter;
+import org.unidal.wdbc.WdbcResult;
+import org.unidal.wdbc.query.DefaultWdbcFilter;
 
 public class StoreItemsFilter extends DefaultWdbcFilter {
    private MessageFormat m_idFormat = new MessageFormat(
@@ -13,14 +13,14 @@ public class StoreItemsFilter extends DefaultWdbcFilter {
    private String getType(String type) {
       if (type == null) {
          return null;
-      } else if (type.contains("ÎäÁ¦")) {
-         return "ÎäÁ¦";
-      } else if (type.contains("Í³Óù")) {
-         return "Í³Óù";
-      } else if (type.contains("ÖÇÁ¦")) {
-         return "ÖÇÁ¦";
-      } else if (type.contains("ÕþÖÎ")) {
-         return "ÕþÖÎ";
+      } else if (type.contains("ï¿½ï¿½ï¿½ï¿½")) {
+         return "ï¿½ï¿½ï¿½ï¿½";
+      } else if (type.contains("Í³ï¿½ï¿½")) {
+         return "Í³ï¿½ï¿½";
+      } else if (type.contains("ï¿½ï¿½ï¿½ï¿½")) {
+         return "ï¿½ï¿½ï¿½ï¿½";
+      } else if (type.contains("ï¿½ï¿½ï¿½ï¿½")) {
+         return "ï¿½ï¿½ï¿½ï¿½";
       } else {
          return null;
       }

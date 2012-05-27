@@ -16,14 +16,14 @@ import com.site.game.sanguo.thread.ThreadContext;
 import com.site.game.sanguo.thread.ThreadException;
 import com.site.game.sanguo.thread.ThreadHelper;
 import com.site.lookup.ContainerHolder;
-import com.site.wdbc.StringSource;
-import com.site.wdbc.WdbcEngine;
-import com.site.wdbc.WdbcException;
-import com.site.wdbc.WdbcQuery;
-import com.site.wdbc.WdbcResult;
-import com.site.wdbc.WdbcSource;
-import com.site.wdbc.WdbcSourceType;
-import com.site.wdbc.http.Request;
+import org.unidal.wdbc.StringSource;
+import org.unidal.wdbc.WdbcEngine;
+import org.unidal.wdbc.WdbcException;
+import org.unidal.wdbc.WdbcQuery;
+import org.unidal.wdbc.WdbcResult;
+import org.unidal.wdbc.WdbcSource;
+import org.unidal.wdbc.WdbcSourceType;
+import org.unidal.wdbc.http.Request;
 
 public class DefaultWdbcFetcher extends ContainerHolder implements WdbcFetcher, Initializable {
    private XmlRegistry m_registry;

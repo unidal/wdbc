@@ -1,0 +1,20 @@
+<plexus>
+	<components>
+		<component>
+			<role>org.unidal.wdbc.query.WdbcFilter</role>
+			<role-hint>list</role-hint>
+			<implementation>org.unidal.wdbc.sosoko.ListFilter</implementation>
+         <configuration>
+            <maxDays>9999</maxDays>
+         </configuration>
+         <requirements>
+            <requirement>
+               <role>org.unidal.wdbc.sosoko.Configuration</role>
+            </requirement>
+            <requirement>
+               <role>org.unidal.wdbc.http.Session</role>
+            </requirement>
+         </requirements>
+		</component>
+	</components>
+</plexus>

@@ -7,9 +7,9 @@ import org.codehaus.plexus.util.IOUtil;
 
 import com.site.game.sanguo.api.Game;
 import com.site.game.sanguo.api.Html;
-import com.site.wdbc.http.Request;
-import com.site.wdbc.http.Response;
-import com.site.wdbc.http.Session;
+import org.unidal.wdbc.http.Request;
+import org.unidal.wdbc.http.Response;
+import org.unidal.wdbc.http.Session;
 
 public class ThreadHelper {
    private static long s_random = (long) (Math.random() * 1000000L);
@@ -21,8 +21,8 @@ public class ThreadHelper {
       String content = IOUtil.toString(response.getContent(), response.getCharset());
 
       if (isAction) {
-         if (content != null && content.contains("×ÊÔ´²»×ã")) {
-            throw new ThreadException("×ÊÔ´²»×ã");
+         if (content != null && content.contains("ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½")) {
+            throw new ThreadException("ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½");
          }
       }
 

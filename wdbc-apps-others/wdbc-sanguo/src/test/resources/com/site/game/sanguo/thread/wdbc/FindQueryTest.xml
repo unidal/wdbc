@@ -1,9 +1,9 @@
 <plexus>
    <components>
       <component>
-         <role>com.site.wdbc.WdbcQuery</role>
+         <role>org.unidal.wdbc.WdbcQuery</role>
          <role-hint>state_list</role-hint>
-         <implementation>com.site.wdbc.FindQuery</implementation>
+         <implementation>org.unidal.wdbc.FindQuery</implementation>
          <configuration>
             <words>
                <word name="state">交州</word>
@@ -16,9 +16,9 @@
          </configuration>
       </component>
       <component>
-         <role>com.site.wdbc.WdbcQuery</role>
+         <role>org.unidal.wdbc.WdbcQuery</role>
          <role-hint>general_list</role-hint>
-         <implementation>com.site.wdbc.FindQuery</implementation>
+         <implementation>org.unidal.wdbc.FindQuery</implementation>
          <configuration>
             <words>
                <word name="name">冯立</word>
@@ -27,9 +27,9 @@
          </configuration>
       </component>
       <component>
-         <role>com.site.wdbc.WdbcQuery</role>
+         <role>org.unidal.wdbc.WdbcQuery</role>
          <role-hint>general_items</role-hint>
-         <implementation>com.site.wdbc.FindQuery</implementation>
+         <implementation>org.unidal.wdbc.FindQuery</implementation>
          <configuration>
             <words>
                <word name="name">方天画戟</word>
@@ -40,9 +40,9 @@
          </configuration>
       </component>
       <component>
-         <role>com.site.wdbc.WdbcQuery</role>
+         <role>org.unidal.wdbc.WdbcQuery</role>
          <role-hint>store_items</role-hint>
-         <implementation>com.site.wdbc.FindQuery</implementation>
+         <implementation>org.unidal.wdbc.FindQuery</implementation>
          <configuration>
             <words>
                <word name="name">方天画戟</word>
@@ -53,9 +53,9 @@
          </configuration>
       </component>
       <component>
-         <role>com.site.wdbc.WdbcQuery</role>
+         <role>org.unidal.wdbc.WdbcQuery</role>
          <role-hint>resource_list</role-hint>
-         <implementation>com.site.wdbc.FindQuery</implementation>
+         <implementation>org.unidal.wdbc.FindQuery</implementation>
          <configuration>
             <words>
                <word name="name">采石场 7 级@title</word>
@@ -68,9 +68,9 @@
          </configuration>
       </component>
       <component>
-         <role>com.site.wdbc.WdbcQuery</role>
+         <role>org.unidal.wdbc.WdbcQuery</role>
          <role-hint>resource_detail</role-hint>
-         <implementation>com.site.wdbc.FindQuery</implementation>
+         <implementation>org.unidal.wdbc.FindQuery</implementation>
          <configuration>
             <words>
                <word name="wood">4235</word>
@@ -82,9 +82,9 @@
          </configuration>
       </component>
       <component>
-         <role>com.site.wdbc.WdbcQuery</role>
+         <role>org.unidal.wdbc.WdbcQuery</role>
          <role-hint>building_list</role-hint>
-         <implementation>com.site.wdbc.FindQuery</implementation>
+         <implementation>org.unidal.wdbc.FindQuery</implementation>
          <configuration>
             <words>
                <word name="name">城墙  2@title</word>
@@ -97,9 +97,9 @@
          </configuration>
       </component>
       <component>
-         <role>com.site.wdbc.WdbcQuery</role>
+         <role>org.unidal.wdbc.WdbcQuery</role>
          <role-hint>building_detail</role-hint>
-         <implementation>com.site.wdbc.FindQuery</implementation>
+         <implementation>org.unidal.wdbc.FindQuery</implementation>
          <configuration>
             <words>
                <word name="wood">2165</word>
@@ -110,9 +110,9 @@
          </configuration>
       </component>
       <component>
-         <role>com.site.wdbc.WdbcQuery</role>
+         <role>org.unidal.wdbc.WdbcQuery</role>
          <role-hint>map_status</role-hint>
-         <implementation>com.site.wdbc.FindQuery</implementation>
+         <implementation>org.unidal.wdbc.FindQuery</implementation>
          <configuration>
             <words>
                <word name="emperor">法兰奇@onmouseover</word>
@@ -120,9 +120,9 @@
          </configuration>
       </component>
       <component>
-         <role>com.site.wdbc.WdbcQuery</role>
+         <role>org.unidal.wdbc.WdbcQuery</role>
          <role-hint>court_list</role-hint>
-         <implementation>com.site.wdbc.FindQuery</implementation>
+         <implementation>org.unidal.wdbc.FindQuery</implementation>
          <configuration>
             <words>
                <word name="hasButton">emperor.state_court@onclick</word>
@@ -131,9 +131,9 @@
          </configuration>
       </component>
       <component>
-         <role>com.site.wdbc.WdbcQuery</role>
+         <role>org.unidal.wdbc.WdbcQuery</role>
          <role-hint>general_detail</role-hint>
-         <implementation>com.site.wdbc.FindQuery</implementation>
+         <implementation>org.unidal.wdbc.FindQuery</implementation>
          <configuration>
             <words>
                <word name="name">龚柔</word>
@@ -147,9 +147,9 @@
          </configuration>
       </component>
       <component>
-         <role>com.site.wdbc.WdbcQuery</role>
+         <role>org.unidal.wdbc.WdbcQuery</role>
          <role-hint>village_detail</role-hint>
-         <implementation>com.site.wdbc.FindQuery</implementation>
+         <implementation>org.unidal.wdbc.FindQuery</implementation>
          <configuration>
             <words>
                <word name="village">东岙</word>

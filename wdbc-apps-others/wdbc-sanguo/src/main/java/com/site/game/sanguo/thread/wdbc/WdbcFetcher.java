@@ -6,8 +6,8 @@ import org.apache.http.HttpException;
 
 import com.site.dal.xml.XmlException;
 import com.site.game.sanguo.thread.ThreadContext;
-import com.site.wdbc.WdbcException;
-import com.site.wdbc.WdbcResult;
+import org.unidal.wdbc.WdbcException;
+import org.unidal.wdbc.WdbcResult;
 
 public interface WdbcFetcher {
 

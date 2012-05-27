@@ -39,7 +39,7 @@ public abstract class AbstractBuildingPlan implements BuildingPlan {
 
                   return next;
                } else if (building.getLevel() == item.getLevel()) {
-                  if (building.getLevel() == 20 || building.getLevel() == 10 && building.getTypeName().equals("°µ²Ö")) {
+                  if (building.getLevel() == 20 || building.getLevel() == 10 && building.getTypeName().equals("ï¿½ï¿½ï¿½ï¿½")) {
                      full.add(building);
                   }
                }
@@ -72,12 +72,12 @@ public abstract class AbstractBuildingPlan implements BuildingPlan {
 
    protected int getAvailableBuildingId(Map<Integer, Build> buildings) {
       for (Build building : buildings.values()) {
-         if (building.getTypeName().equals("¹¤µØ")) {
+         if (building.getTypeName().equals("ï¿½ï¿½ï¿½ï¿½")) {
             return building.getResourceId();
          }
       }
 
-      // ¿Õ¼ä²»¹»,²»ÄÜ½¨ÔìÐÂµÄ½¨Öþ!
+      // ï¿½Õ¼ä²»ï¿½ï¿½,ï¿½ï¿½ï¿½Ü½ï¿½ï¿½ï¿½ï¿½ÂµÄ½ï¿½ï¿½ï¿½!
       return -1;
    }
 

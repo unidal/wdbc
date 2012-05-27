@@ -1,0 +1,17 @@
+<plexus>
+	<components>
+		<component>
+			<role>org.unidal.wdbc.query.WdbcFilter</role>
+			<role-hint>list</role-hint>
+			<implementation>org.unidal.wdbc.ganji.ListFilter</implementation>
+         <configuration>
+            <maxDays>999</maxDays>
+         </configuration>
+         <requirements>
+            <requirement>
+               <role>org.unidal.wdbc.ganji.Configuration</role>
+            </requirement>
+         </requirements>
+		</component>
+	</components>
+</plexus>

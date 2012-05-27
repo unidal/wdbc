@@ -44,8 +44,8 @@ import com.site.game.sanguo.thread.ThreadException;
 import com.site.game.sanguo.thread.ThreadHandler;
 import com.site.game.sanguo.thread.ThreadHelper;
 import com.site.game.sanguo.thread.wdbc.WdbcFetcher;
-import com.site.wdbc.WdbcResult;
-import com.site.wdbc.http.Request;
+import org.unidal.wdbc.WdbcResult;
+import org.unidal.wdbc.http.Request;
 
 public class RefreshHandler implements ThreadHandler, LogEnabled {
 	private Logger m_logger;

@@ -3,7 +3,7 @@ Archiver-Version: Plexus Archiver
 Created-By: Apache Maven
 Built-By: Frankie Wu
 Build-Jdk: 1.5.0_01
-Main-Class: com.site.wdbc.zhaopin.Crawler
+Main-Class: org.unidal.wdbc.zhaopin.Crawler
 Class-Path: lib/aspectjrt.jar
   lib/commons-codec.jar
   lib/commons-logging-api.jar

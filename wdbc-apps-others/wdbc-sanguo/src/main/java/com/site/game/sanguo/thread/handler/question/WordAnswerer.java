@@ -39,7 +39,7 @@ public class WordAnswerer implements Answerer, Initializable {
    }
 
    public boolean canAnswer(String question) {
-      return question.startsWith("ÐªºóÓï");
+      return question.startsWith("Ðªï¿½ï¿½ï¿½ï¿½");
    }
 
    public void initialize() throws InitializationException {

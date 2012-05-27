@@ -2,11 +2,11 @@ package com.site.game.sanguo.thread.wdbc.filter;
 
 import java.text.MessageFormat;
 
-import com.site.wdbc.WdbcResult;
-import com.site.wdbc.query.DefaultWdbcFilter;
+import org.unidal.wdbc.WdbcResult;
+import org.unidal.wdbc.query.DefaultWdbcFilter;
 
 public class MapDetailFilter extends DefaultWdbcFilter {
-   private MessageFormat m_format = new MessageFormat("{0}ÊÆ¡¡Á¦£º{1} Áª¡¡ÃË£º ¾ý¡¡Ö÷£º ¾Ó¡¡Ãñ£º{2} ¾ô¡¡Î»£º{3}");
+   private MessageFormat m_format = new MessageFormat("{0}ï¿½Æ¡ï¿½ï¿½ï¿½ï¿½ï¿½{1} ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ó¡ï¿½ï¿½ï¿½{2} ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½{3}");
 
    @Override
    public void doFilter(WdbcResult result) {

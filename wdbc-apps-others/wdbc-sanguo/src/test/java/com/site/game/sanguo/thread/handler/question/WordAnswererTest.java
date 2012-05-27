@@ -6,7 +6,7 @@ public class WordAnswererTest extends ComponentTestCase {
    public void testAnswer() throws Exception {
       Answerer answerer = lookup(Answerer.class, "word");
 
-      assertTrue(answerer.canAnswer("п╙╨СсО ╩фжриД╪Щ ╣добр╩╬Дйг:"));
-      assertEquals(3, answerer.answer("п╙╨СсО ╩фжриД╪Щ ╣добр╩╬Дйг:", new String[] { "╟вкм", "р╩д©акх╩", "╟ы╥╒╟ыжп", "н╗╡ейг╬ы" }));
+      assertTrue(answerer.canAnswer("п╙О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫р╩О©╫О©╫О©╫О©╫:"));
+      assertEquals(3, answerer.answer("п╙О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫р╩О©╫О©╫О©╫О©╫:", new String[] { "О©╫О©╫О©╫О©╫", "р╩д©О©╫О©╫х╩", "О©╫ы╥О©╫О©╫О©╫О©╫О©╫", "н╗О©╫О©╫О©╫г╬О©╫" }));
    }
 }

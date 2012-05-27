@@ -2,11 +2,11 @@ package com.site.game.sanguo.thread.wdbc.filter;
 
 import java.text.MessageFormat;
 
-import com.site.wdbc.WdbcResult;
-import com.site.wdbc.query.DefaultWdbcFilter;
+import org.unidal.wdbc.WdbcResult;
+import org.unidal.wdbc.query.DefaultWdbcFilter;
 
 public class BuildingDetailFilter extends DefaultWdbcFilter {
-   private MessageFormat m_format = new MessageFormat("{0} +{1}    商业值 {2} / 天");
+   private MessageFormat m_format = new MessageFormat("{0} +{1}    锟斤拷业值 {2} / 锟斤拷");
 
    @Override
    public void doFilter(WdbcResult result) {

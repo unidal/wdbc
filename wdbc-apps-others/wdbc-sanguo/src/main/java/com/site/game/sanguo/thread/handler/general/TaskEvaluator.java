@@ -2,13 +2,13 @@ package com.site.game.sanguo.thread.handler.general;
 
 public class TaskEvaluator {
    public boolean evaluate(General general, com.site.game.sanguo.model.StateTask task) {
-      if (task.getTypeName().equals("µ¥Ìô") && general.getWuli() <= 30) {
+      if (task.getTypeName().equals("ï¿½ï¿½ï¿½ï¿½") && general.getWuli() <= 30) {
          return false;
-      } else if (task.getTypeName().equals("Î§½Ë") && general.getTongyuli() <= 30) {
+      } else if (task.getTypeName().equals("Î§ï¿½ï¿½") && general.getTongyuli() <= 30) {
          return false;
-      } else if (task.getTypeName().equals("Ëµ·ş") && general.getZhenzhili() <= 30) {
+      } else if (task.getTypeName().equals("Ëµï¿½ï¿½") && general.getZhenzhili() <= 30) {
          return false;
-      } else if (task.getTypeName().equals("ÕĞÄÉ") && general.getZhili() <= 30) {
+      } else if (task.getTypeName().equals("ï¿½ï¿½ï¿½ï¿½") && general.getZhili() <= 30) {
          return false;
       } else {
          double difficult = Math.sqrt(task.getPoints()); // [1, 10]

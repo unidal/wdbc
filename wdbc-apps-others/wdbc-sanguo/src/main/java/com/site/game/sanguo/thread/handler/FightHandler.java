@@ -18,10 +18,10 @@ import com.site.game.sanguo.thread.ThreadException;
 import com.site.game.sanguo.thread.ThreadHandler;
 import com.site.game.sanguo.thread.ThreadHelper;
 import com.site.game.sanguo.thread.wdbc.WdbcFetcher;
-import com.site.wdbc.WdbcException;
-import com.site.wdbc.WdbcResult;
-import com.site.wdbc.http.Request;
-import com.site.wdbc.http.Session;
+import org.unidal.wdbc.WdbcException;
+import org.unidal.wdbc.WdbcResult;
+import org.unidal.wdbc.http.Request;
+import org.unidal.wdbc.http.Session;
 
 public class FightHandler implements ThreadHandler, LogEnabled {
    private WdbcFetcher m_wdbcFetcher;
@@ -119,7 +119,7 @@ public class FightHandler implements ThreadHandler, LogEnabled {
          return false;
       }
 
-      // must have ÖÐ¾üÕÊ
+      // must have ï¿½Ð¾ï¿½ï¿½ï¿½
       if (getBuildingId(ctx) == -1) {
          return false;
       }
@@ -153,7 +153,7 @@ public class FightHandler implements ThreadHandler, LogEnabled {
 
    private int getBuildingId(ThreadContext ctx) {
       for (Build build : ctx.getFarm().getBuildings().values()) {
-         if (build.getTypeName().equals("ÖÐ¾üÕÊ")) {
+         if (build.getTypeName().equals("ï¿½Ð¾ï¿½ï¿½ï¿½")) {
             return build.getResourceId();
          }
       }

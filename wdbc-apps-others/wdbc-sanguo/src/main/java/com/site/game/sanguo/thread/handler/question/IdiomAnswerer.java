@@ -49,7 +49,7 @@ public class IdiomAnswerer implements Answerer, LogEnabled, Initializable {
    }
 
    public boolean canAnswer(String question) {
-      return question.contains("³ÉÓï");
+      return question.contains("ï¿½ï¿½ï¿½ï¿½");
    }
 
    public void initialize() throws InitializationException {

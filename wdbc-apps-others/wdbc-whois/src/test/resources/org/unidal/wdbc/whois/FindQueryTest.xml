@@ -1,0 +1,14 @@
+<plexus>
+   <components>
+      <component>
+         <role>org.unidal.wdbc.WdbcQuery</role>
+         <role-hint>details</role-hint>
+         <implementation>org.unidal.wdbc.FindQuery</implementation>
+         <configuration>
+            <words>
+               <word name="content">Expiration Date:</word>
+            </words>
+         </configuration>
+      </component>
+   </components>
+</plexus>

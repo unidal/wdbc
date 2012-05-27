@@ -55,11 +55,11 @@ import com.site.game.sanguo.thread.wdbc.filter.StateListFilter;
 import com.site.game.sanguo.thread.wdbc.filter.StoreItemsFilter;
 import com.site.game.sanguo.thread.wdbc.filter.VillageDetailFilter;
 import com.site.lookup.configuration.Component;
-import com.site.wdbc.http.Request;
-import com.site.wdbc.http.Session;
-import com.site.wdbc.http.configuration.AbstractWdbcComponentsConfigurator;
-import com.site.wdbc.http.impl.DefaultSession;
-import com.site.wdbc.http.impl.FormRequest;
+import org.unidal.wdbc.http.Request;
+import org.unidal.wdbc.http.Session;
+import org.unidal.wdbc.http.configuration.AbstractWdbcComponentsConfigurator;
+import org.unidal.wdbc.http.impl.DefaultSession;
+import org.unidal.wdbc.http.impl.FormRequest;
 
 public class ComponentsConfigurator extends AbstractWdbcComponentsConfigurator {
    public static void main(String[] args) {

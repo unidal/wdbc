@@ -5,22 +5,22 @@ import org.codehaus.plexus.personality.plexus.lifecycle.phase.InitializationExce
 
 public class SecondaryBuildingPlan extends AbstractBuildingPlan implements Initializable {
    public void initialize() throws InitializationException {
-      build("Á¸²Ö", 8);
-      build("²Ö¿â", 8);
-      build("ÖÐ¾üÕÊ", 5);
-      build("±ðÔº", 10);
-      build("Á¸²Ö", 20);
-      build("²Ö¿â", 20);
-      build("±øÉá", 3);
-      build("Ð£³¡", 5);
-      build("ÍÁÄ¾Ë¾", 10);
-      build("¼¯ÊÐ", 10);
-      build("Ð£³¡", 10);
-      build("Ñ§¹Ý", 10);
-      build("ÍÁÄ¾Ë¾", 20);
-      build("±øÉá", 10);
-      build("¼¯ÊÐ", 20);
-      build("Á¸²Ö", 20);
-      build("²Ö¿â", 20);
+      build("ï¿½ï¿½ï¿½ï¿½", 8);
+      build("ï¿½Ö¿ï¿½", 8);
+      build("ï¿½Ð¾ï¿½ï¿½ï¿½", 5);
+      build("ï¿½ï¿½Ôº", 10);
+      build("ï¿½ï¿½ï¿½ï¿½", 20);
+      build("ï¿½Ö¿ï¿½", 20);
+      build("ï¿½ï¿½ï¿½ï¿½", 3);
+      build("Ð£ï¿½ï¿½", 5);
+      build("ï¿½ï¿½Ä¾Ë¾", 10);
+      build("ï¿½ï¿½ï¿½ï¿½", 10);
+      build("Ð£ï¿½ï¿½", 10);
+      build("Ñ§ï¿½ï¿½", 10);
+      build("ï¿½ï¿½Ä¾Ë¾", 20);
+      build("ï¿½ï¿½ï¿½ï¿½", 10);
+      build("ï¿½ï¿½ï¿½ï¿½", 20);
+      build("ï¿½ï¿½ï¿½ï¿½", 20);
+      build("ï¿½Ö¿ï¿½", 20);
    }
 }

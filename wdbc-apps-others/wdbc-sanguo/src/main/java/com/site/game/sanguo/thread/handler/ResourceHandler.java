@@ -18,10 +18,10 @@ import com.site.game.sanguo.thread.ThreadException;
 import com.site.game.sanguo.thread.ThreadHandler;
 import com.site.game.sanguo.thread.ThreadHelper;
 import com.site.game.sanguo.thread.wdbc.WdbcFetcher;
-import com.site.wdbc.WdbcException;
-import com.site.wdbc.WdbcResult;
-import com.site.wdbc.http.Request;
-import com.site.wdbc.http.Session;
+import org.unidal.wdbc.WdbcException;
+import org.unidal.wdbc.WdbcResult;
+import org.unidal.wdbc.http.Request;
+import org.unidal.wdbc.http.Session;
 
 public class ResourceHandler implements ThreadHandler, LogEnabled {
    private WdbcFetcher m_wdbcFetcher;
@@ -39,7 +39,7 @@ public class ResourceHandler implements ThreadHandler, LogEnabled {
          if (task.getTypeId() == 8) {
             String intro = task.getIntro();
 
-            if (intro.contains("Å©Ìï") || intro.contains("²ÉÊ¯³¡") || intro.contains("ÁÖ³¡") || intro.contains("¿óÉ½")) {
+            if (intro.contains("Å©ï¿½ï¿½") || intro.contains("ï¿½ï¿½Ê¯ï¿½ï¿½") || intro.contains("ï¿½Ö³ï¿½") || intro.contains("ï¿½ï¿½É½")) {
                hasField = true;
             } else {
                hasBuilding = true;

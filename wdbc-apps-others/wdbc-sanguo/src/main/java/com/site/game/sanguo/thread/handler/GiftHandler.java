@@ -16,59 +16,59 @@ import com.site.game.sanguo.thread.ThreadContext;
 import com.site.game.sanguo.thread.ThreadException;
 import com.site.game.sanguo.thread.ThreadHandler;
 import com.site.game.sanguo.thread.ThreadHelper;
-import com.site.wdbc.WdbcException;
-import com.site.wdbc.http.Request;
-import com.site.wdbc.http.Session;
+import org.unidal.wdbc.WdbcException;
+import org.unidal.wdbc.http.Request;
+import org.unidal.wdbc.http.Session;
 
 public class GiftHandler implements ThreadHandler, LogEnabled {
-   private Request m_mygiftRequest;
+	private Request m_mygiftRequest;
 
-   private Logger m_logger;
+	private Logger m_logger;
 
-   public void enableLogging(Logger logger) {
-      m_logger = logger;
-   }
+	public void enableLogging(Logger logger) {
+		m_logger = logger;
+	}
 
-   private void getMyGift(ThreadContext ctx) throws HttpException, IOException {
-      Session session = ctx.getSession();
+	private void getMyGift(ThreadContext ctx) throws HttpException, IOException {
+		Session session = ctx.getSession();
 
-      ThreadHelper.setRandom(ctx);
+		ThreadHelper.setRandom(ctx);
 
-      try {
-         ThreadHelper.executeRequest(session, m_mygiftRequest, true);
-         m_logger.info("领取新手礼包");
-      } catch (ThreadException e) {
-         // ignore it
-      }
-   }
+		try {
+			ThreadHelper.executeRequest(session, m_mygiftRequest, true);
+			m_logger.info("领取新手礼包");
+		} catch (ThreadException e) {
+			// ignore it
+		}
+	}
 
-   public void handle(ThreadContext ctx) throws ThreadException {
-      if (ctx.getModel().getGift().isEligible()) {
-         try {
-            getMyGift(ctx);
-            updateModel(ctx);
-         } catch (Exception e) {
-            m_logger.warn("Error when handling MyGift.", e);
-         }
-      }
-   }
+	public void handle(ThreadContext ctx) throws ThreadException {
+		if (ctx.getModel().getGift().isEligible()) {
+			try {
+				getMyGift(ctx);
+				updateModel(ctx);
+			} catch (Exception e) {
+				m_logger.warn("Error when handling MyGift.", e);
+			}
+		}
+	}
 
-   private void updateModel(ThreadContext ctx) throws HttpException, IOException, XmlException, WdbcException,
-         ParseException {
-      Model model = ctx.getModel();
-      Farm mainFarm = model.getFarms().get(0);
-      Status status = new Status();
-      Calendar cal = Calendar.getInstance();
+	private void updateModel(ThreadContext ctx) throws HttpException,
+			IOException, XmlException, WdbcException, ParseException {
+		Model model = ctx.getModel();
+		Farm mainFarm = model.getFarms().get(0);
+		Status status = new Status();
+		Calendar cal = Calendar.getInstance();
 
-      // set to next day
-      cal.set(Calendar.DAY_OF_MONTH, cal.get(Calendar.DAY_OF_MONTH) + 1);
-      cal.set(Calendar.HOUR_OF_DAY, 0);
-      cal.set(Calendar.MINUTE, 0);
-      cal.set(Calendar.SECOND, 0);
+		// set to next day
+		cal.set(Calendar.DAY_OF_MONTH, cal.get(Calendar.DAY_OF_MONTH) + 1);
+		cal.set(Calendar.HOUR_OF_DAY, 0);
+		cal.set(Calendar.MINUTE, 0);
+		cal.set(Calendar.SECOND, 0);
 
-      status.setName("gift");
-      status.setDirty(true);
-      status.setNextSchedule(cal.getTime());
-      mainFarm.getHandlerStatuses().put(status.getName(), status);
-   }
+		status.setName("gift");
+		status.setDirty(true);
+		status.setNextSchedule(cal.getTime());
+		mainFarm.getHandlerStatuses().put(status.getName(), status);
+	}
 }

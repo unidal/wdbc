@@ -33,7 +33,7 @@ public class NameAnswerer implements Answerer, Initializable {
    }
 
    public boolean canAnswer(String question) {
-      return question.contains("µÄ×ÖÊÇ");
+      return question.contains("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
    }
 
    public void initialize() throws InitializationException {
@@ -48,7 +48,7 @@ public class NameAnswerer implements Answerer, Initializable {
                break;
             }
 
-            int pos = line.indexOf("×Ö");
+            int pos = line.indexOf("ï¿½ï¿½");
             if (pos > 0) {
                String name = line.substring(0, pos);
                String zi = line.substring(pos);
