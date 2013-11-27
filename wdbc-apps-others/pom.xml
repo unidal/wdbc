@@ -13,6 +13,7 @@
    <name>WDBC Applications for others</name>
    <packaging>pom</packaging>
    <modules>
+      <module>wdbc-cat</module>
       <module>wdbc-whois</module>
       <module>wdbc-linked-in</module>
       <module>wdbc-sanguo</module>

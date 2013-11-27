@@ -1,0 +1,535 @@
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>CAT - Transaction Summary Report</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link href="/cat/css/body.css" type="text/css" rel="stylesheet"></head>
+<body>
+	<div class="login"><a href="">Login</a></div>
+	<table width="100%" cellspacing="0" cellpadding="0">
+		<tr>
+			<td width="80%"><ul class="tabs">
+					<li ><a
+								href="/cat/r/home?domain=Cat&date=20121023&reportType=day&op=history">Home</a></li>
+						<li class="selected"><a
+								href="/cat/r/t?domain=Cat&date=20121023&reportType=day&op=history">Transaction</a></li>
+						<li ><a
+								href="/cat/r/e?domain=Cat&date=20121023&reportType=day&op=history">Event</a></li>
+						<li ><a
+								href="/cat/r/p?domain=Cat&date=20121023&reportType=day&op=history">Problem</a></li>
+						<li ><a
+								href="/cat/r/h?domain=Cat&date=20121023&reportType=day&op=history">Heartbeat</a></li>
+						<li ><a
+								href="/cat/r/matrix?domain=Cat&date=20121023&reportType=day&op=history">Matrix</a></li>
+						<li ><a
+								href="/cat/r/cross?domain=Cat&date=20121023&reportType=day&op=history">Cross</a></li>
+						<li ><a
+								href="/cat/r/cache?domain=Cat&date=20121023&reportType=day&op=history">Cache</a></li>
+						<li ><a
+								href="/cat/r/sql?domain=Cat&date=20121023&reportType=day&op=history">SQL</a></li>
+						<li ><a
+								href="/cat/r/database?domain=Cat&date=20121023&reportType=day&op=history">Database</a></li>
+						<li ><a
+								href="/cat/r/health?domain=Cat&date=20121023&reportType=day&op=history">Health</a></li>
+						</ul></td>
+			<td width="20%"><ul class="tabs">
+				<li ><a
+							href="/cat/s/alarm">Alarm</a></li>
+					</ul></td>
+		</tr>
+	</table>
+	<link href="/cat/css/report.css" type="text/css" rel="stylesheet"><div class="report">
+	<table class="header">
+		<tr>
+			<td class="title">&nbsp;&nbsp;From 2012-10-23 00:00:00 to 2012-10-23 23:59:59</td>
+			<td class="switch"><a href="?domain=Cat">Switch To Hourly Mode</a>
+			</td>
+			<td class="nav">
+					&nbsp;&nbsp;
+								&nbsp;&nbsp;[ <a href="?op=history&domain=Cat&date=20121023&reportType=month">month</a> ]&nbsp;&nbsp;
+						
+								&nbsp;&nbsp;[ <a href="?op=history&domain=Cat&date=20121023&reportType=week">week</a> ]&nbsp;&nbsp;
+						
+								&nbsp;&nbsp;[ <a href="?op=history&domain=Cat&date=20121023&reportType=day" class="current">day</a> ]
+						
+				&nbsp;&nbsp;[ <a href="?op=history&domain=Cat&date=20121023&reportType=day&step=-1&type=&queryname=">-1d</a> ]&nbsp;&nbsp;
+					&nbsp;&nbsp;[ <a href="?op=history&domain=Cat&date=20121023&reportType=day&step=1&type=&queryname=">+1d</a> ]&nbsp;&nbsp;
+					&nbsp;&nbsp;[ <a href="?op=history&domain=Cat&reportType=day&nav=next&type=&queryname=">now</a> ]&nbsp;&nbsp;
+					
+			</td>
+		</tr>
+	</table>
+	<table class="navbar">
+		<tr>
+			<td class="domain" rowspan="2" style="vertical-align:top;">
+				<div class="domain">
+					
+						&nbsp;<a href="?op=history&domain=AccountMQ&date=20121023&reportType=day">[&nbsp;AccountMQ&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=AccountServer&date=20121023&reportType=day">[&nbsp;AccountServer&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=AccountWeb&date=20121023&reportType=day">[&nbsp;AccountWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=AdwordsWeb&date=20121023&reportType=day">[&nbsp;AdwordsWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=AuditbackService&date=20121023&reportType=day">[&nbsp;AuditbackService&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=AuditbackWeb&date=20121023&reportType=day">[&nbsp;AuditbackWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=AutoauditMQ&date=20121023&reportType=day">[&nbsp;AutoauditMQ&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=BCTuangouWeb&date=20121023&reportType=day">[&nbsp;BCTuangouWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=BadgeMQ&date=20121023&reportType=day">[&nbsp;BadgeMQ&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=BaseDataServer&date=20121023&reportType=day">[&nbsp;BaseDataServer&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=DPIndexWeb&date=20121023&reportType=day">[&nbsp;DPIndexWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=DPSearch&date=20121023&reportType=day">[&nbsp;DPSearch&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=DecoratorServer&date=20121023&reportType=day">[&nbsp;DecoratorServer&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=FeedMQ&date=20121023&reportType=day">[&nbsp;FeedMQ&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=FeedServer&date=20121023&reportType=day">[&nbsp;FeedServer&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=GroupService&date=20121023&reportType=day">[&nbsp;GroupService&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=GroupWeb&date=20121023&reportType=day">[&nbsp;GroupWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=KeywordService&date=20121023&reportType=day">[&nbsp;KeywordService&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=KeywordWeb&date=20121023&reportType=day">[&nbsp;KeywordWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=MBookingCallcenter&date=20121023&reportType=day">[&nbsp;MBookingCallcenter&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=MBookingService&date=20121023&reportType=day">[&nbsp;MBookingService&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=MBookingWeb&date=20121023&reportType=day">[&nbsp;MBookingWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=MConfigAPI&date=20121023&reportType=day">[&nbsp;MConfigAPI&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=MLocationService&date=20121023&reportType=day">[&nbsp;MLocationService&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=MapService&date=20121023&reportType=day">[&nbsp;MapService&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=MessageAdminWeb&date=20121023&reportType=day">[&nbsp;MessageAdminWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=MessageMQ&date=20121023&reportType=day">[&nbsp;MessageMQ&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=MessageServer&date=20121023&reportType=day">[&nbsp;MessageServer&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=MessageWeb&date=20121023&reportType=day">[&nbsp;MessageWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=MobileApi&date=20121023&reportType=day">[&nbsp;MobileApi&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=MobileMembercardBcWeb&date=20121023&reportType=day">[&nbsp;MobileMembercardBcWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=MobileMembercardMainApiWeb&date=20121023&reportType=day">[&nbsp;MobileMembercardMainApiWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=MobileMembercardMainServer&date=20121023&reportType=day">[&nbsp;MobileMembercardMainServer&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=OpenWeb&date=20121023&reportType=day">[&nbsp;OpenWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=PayChannel&date=20121023&reportType=day">[&nbsp;PayChannel&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=PayEngine&date=20121023&reportType=day">[&nbsp;PayEngine&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=PayOrder&date=20121023&reportType=day">[&nbsp;PayOrder&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=PiccenterService&date=20121023&reportType=day">[&nbsp;PiccenterService&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=PiccenterUpload&date=20121023&reportType=day">[&nbsp;PiccenterUpload&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=PiccenterWeb&date=20121023&reportType=day">[&nbsp;PiccenterWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=PromoWeb&date=20121023&reportType=day">[&nbsp;PromoWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=ReviewServer&date=20121023&reportType=day">[&nbsp;ReviewServer&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=ShopAccountAdminWeb&date=20121023&reportType=day">[&nbsp;ShopAccountAdminWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=ShopAccountServer&date=20121023&reportType=day">[&nbsp;ShopAccountServer&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=ShopAccountWeb&date=20121023&reportType=day">[&nbsp;ShopAccountWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=ShopBusinessWeb&date=20121023&reportType=day">[&nbsp;ShopBusinessWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=ShopSearchWeb&date=20121023&reportType=day">[&nbsp;ShopSearchWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=ShopServer&date=20121023&reportType=day">[&nbsp;ShopServer&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=ShopWeb&date=20121023&reportType=day">[&nbsp;ShopWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=ShoppicService&date=20121023&reportType=day">[&nbsp;ShoppicService&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=ShoppicWeb&date=20121023&reportType=day">[&nbsp;ShoppicWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=SmsServer&date=20121023&reportType=day">[&nbsp;SmsServer&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=SocialFeedMQ&date=20121023&reportType=day">[&nbsp;SocialFeedMQ&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=SocialFeedServer&date=20121023&reportType=day">[&nbsp;SocialFeedServer&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=SocialRelationshipServer&date=20121023&reportType=day">[&nbsp;SocialRelationshipServer&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=Swallow&date=20121023&reportType=day">[&nbsp;Swallow&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=TuanGouApi&date=20121023&reportType=day">[&nbsp;TuanGouApi&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=TuanGouApiMobile&date=20121023&reportType=day">[&nbsp;TuanGouApiMobile&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=TuanGouRemote&date=20121023&reportType=day">[&nbsp;TuanGouRemote&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=TuanGouWap&date=20121023&reportType=day">[&nbsp;TuanGouWap&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=TuanGouWeb&date=20121023&reportType=day">[&nbsp;TuanGouWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=Unipay&date=20121023&reportType=day">[&nbsp;Unipay&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=UserBaseService&date=20121023&reportType=day">[&nbsp;UserBaseService&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=UserService&date=20121023&reportType=day">[&nbsp;UserService&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=UserWeb&date=20121023&reportType=day">[&nbsp;UserWeb&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=magicMirror&date=20121023&reportType=day">[&nbsp;magicMirror&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=tuangou-paygate&date=20121023&reportType=day">[&nbsp;tuangou-paygate&nbsp;]</a>
+							&nbsp;
+					
+						&nbsp;<a href="?op=history&domain=Cat&date=20121023&reportType=day" class="current">[&nbsp;Cat&nbsp;]</a>
+							&nbsp;
+					</div>
+			</td>
+		</tr>
+	</table>
+	
+	<link href="/cat/css/transaction.css" type="text/css" rel="stylesheet">
+	<script src="/cat/js/jquery-1.7.1.js" type="text/javascript"></script>
+	<script src="/cat/js/flotr2.js" type="text/javascript"></script>
+	<script src="/cat/js/baseTools.js" type="text/javascript"></script>
+	<script src="/cat/js/trendGraph.js" type="text/javascript"></script>
+</br>
+<table class="machines">
+	<tr style="text-align: left">
+		<th>Machines:
+   	  		 &nbsp;[&nbsp;
+   	  		
+					
+						<a	href="?op=history&domain=Cat&date=20121023&ip=All&type=&queryname=&reportType=day&startDate=20121023&endDate=20121024"
+									class="current">All</a>
+					
+					
+				
+   	 		&nbsp;]&nbsp;
+			 &nbsp;[&nbsp;
+   	  		
+					
+					
+						<a	href="?op=history&domain=Cat&date=20121023&ip=10.1.6.102&type=&queryname=&reportType=day&startDate=20121023&endDate=20121024">10.1.6.102</a>
+					
+				
+   	 		&nbsp;]&nbsp;
+			 &nbsp;[&nbsp;
+   	  		
+					
+					
+						<a	href="?op=history&domain=Cat&date=20121023&ip=10.1.6.108&type=&queryname=&reportType=day&startDate=20121023&endDate=20121024">10.1.6.108</a>
+					
+				
+   	 		&nbsp;]&nbsp;
+			 &nbsp;[&nbsp;
+   	  		
+					
+					
+						<a	href="?op=history&domain=Cat&date=20121023&ip=10.1.6.126&type=&queryname=&reportType=day&startDate=20121023&endDate=20121024">10.1.6.126</a>
+					
+				
+   	 		&nbsp;]&nbsp;
+			 &nbsp;[&nbsp;
+   	  		
+					
+					
+						<a	href="?op=history&domain=Cat&date=20121023&ip=10.1.6.128&type=&queryname=&reportType=day&startDate=20121023&endDate=20121024">10.1.6.128</a>
+					
+				
+   	 		&nbsp;]&nbsp;
+			 &nbsp;[&nbsp;
+   	  		
+					
+					
+						<a	href="?op=history&domain=Cat&date=20121023&ip=10.1.6.37&type=&queryname=&reportType=day&startDate=20121023&endDate=20121024">10.1.6.37</a>
+					
+				
+   	 		&nbsp;]&nbsp;
+			 
+		</th>
+	</tr>
+</table>
+<br>
+<table class="transaction">
+	
+		
+		<tr>
+			<th><a	href="?op=history&domain=Cat&date=20121023&ip=All&reportType=day&sort=type&startDate=20121023&endDate=20121024">Type</a></th>
+			<th class="right"><a	href="?op=history&domain=Cat&date=20121023&ip=All&reportType=day&sort=total&startDate=20121023&endDate=20121024">Total Count</a></th>
+			<th class="right"><a	href="?op=history&domain=Cat&date=20121023&ip=All&reportType=day&sort=failure&startDate=20121023&endDate=20121024">Failure Count</a></th>
+			<th class="right"><a	href="?op=history&domain=Cat&date=20121023&ip=All&reportType=day&sort=failurePercent&startDate=20121023&endDate=20121024">Failure%</a></th>
+			<th class="right">Sample Link</th>
+						<th class="right">Min(ms)</th>
+						<th class="right">Max(ms)</th>
+			<th class="right"><a	href="?op=history&domain=Cat&date=20121023&ip=All&reportType=day&sort=avg&startDate=20121023&endDate=20121024">Avg</a>(ms)</th>
+			<th class="right"><a	href="?op=history&domain=Cat&date=20121023&ip=All&reportType=day&sort=95line&startDate=20121023&endDate=20121024">95Line</a>(ms)</th>
+			<th class="right">Std(ms)</th>
+						<th class="right">TPS</th>
+					</tr>
+			
+				
+				
+				<tr class="even">
+					<td style="text-align: left">
+							<a href="?op=historyGraph&domain=Cat&date=20121023&ip=All&reportType=day&type=Checkpoint&startDate=20121023&endDate=20121024" class="history_graph_link" data-status="0">[:: show ::]</a>
+							<a href="?op=history&domain=Cat&date=20121023&ip=All&reportType=day&type=Checkpoint&startDate=20121023&endDate=20121024">Checkpoint</a></td>
+					<td>1,342</td>
+					<td>0</td>
+					<td>0.00%</td>
+					<td><a	href="/cat/r/m/Cat-0a010625-375256-545?domain=Cat">Log View</a></td>
+					<td>0.3</td>
+					<td>192465.2</td>
+					<td>7332.2</td>
+					<td>40377.6</td>
+					<td>22834.8</td>
+					<td>0.0</td>
+				</tr>
+				<tr class="graphs"><td colspan="11"><div id="0" style="display:none"></div></td></tr>
+			
+				
+				
+				<tr class="odd">
+					<td style="text-align: left">
+							<a href="?op=historyGraph&domain=Cat&date=20121023&ip=All&reportType=day&type=System&startDate=20121023&endDate=20121024" class="history_graph_link" data-status="1">[:: show ::]</a>
+							<a href="?op=history&domain=Cat&date=20121023&ip=All&reportType=day&type=System&startDate=20121023&endDate=20121024">System</a></td>
+					<td>27,034</td>
+					<td>0</td>
+					<td>0.00%</td>
+					<td><a	href="/cat/r/m/Cat-0a010625-375256-0?domain=Cat">Log View</a></td>
+					<td>0.1</td>
+					<td>604414.6</td>
+					<td>2316.0</td>
+					<td>7249.5</td>
+					<td>13930.9</td>
+					<td>0.3</td>
+				</tr>
+				<tr class="graphs"><td colspan="11"><div id="1" style="display:none"></div></td></tr>
+			
+				
+				
+				<tr class="even">
+					<td style="text-align: left">
+							<a href="?op=historyGraph&domain=Cat&date=20121023&ip=All&reportType=day&type=Task&startDate=20121023&endDate=20121024" class="history_graph_link" data-status="2">[:: show ::]</a>
+							<a href="?op=history&domain=Cat&date=20121023&ip=All&reportType=day&type=Task&startDate=20121023&endDate=20121024">Task</a></td>
+					<td>8,650</td>
+					<td>0</td>
+					<td>0.00%</td>
+					<td><a	href="/cat/r/m/Cat-0a010680-375256-1291?domain=Cat">Log View</a></td>
+					<td>3.8</td>
+					<td>33179.1</td>
+					<td>162.4</td>
+					<td>562.6</td>
+					<td>797.4</td>
+					<td>0.1</td>
+				</tr>
+				<tr class="graphs"><td colspan="11"><div id="2" style="display:none"></div></td></tr>
+			
+				
+				
+				<tr class="odd">
+					<td style="text-align: left">
+							<a href="?op=historyGraph&domain=Cat&date=20121023&ip=All&reportType=day&type=SQL&startDate=20121023&endDate=20121024" class="history_graph_link" data-status="3">[:: show ::]</a>
+							<a href="?op=history&domain=Cat&date=20121023&ip=All&reportType=day&type=SQL&startDate=20121023&endDate=20121024">SQL</a></td>
+					<td>194,069</td>
+					<td>0</td>
+					<td>0.00%</td>
+					<td><a	href="/cat/r/m/Cat-0a010625-375256-545?domain=Cat">Log View</a></td>
+					<td>0.4</td>
+					<td>165858</td>
+					<td>63.3</td>
+					<td>423.5</td>
+					<td>1027.0</td>
+					<td>2.2</td>
+				</tr>
+				<tr class="graphs"><td colspan="11"><div id="3" style="display:none"></div></td></tr>
+			
+				
+				
+				<tr class="even">
+					<td style="text-align: left">
+							<a href="?op=historyGraph&domain=Cat&date=20121023&ip=All&reportType=day&type=BucketService&startDate=20121023&endDate=20121024" class="history_graph_link" data-status="4">[:: show ::]</a>
+							<a href="?op=history&domain=Cat&date=20121023&ip=All&reportType=day&type=BucketService&startDate=20121023&endDate=20121024">BucketService</a></td>
+					<td>465</td>
+					<td>1</td>
+					<td>0.22%</td>
+					<td><a	href="/cat/r/m/Cat-0a010680-375267-17939?domain=Cat">Log View</a></td>
+					<td>0.1</td>
+					<td>3148.6</td>
+					<td>34.2</td>
+					<td>126.0</td>
+					<td>152.1</td>
+					<td>0.0</td>
+				</tr>
+				<tr class="graphs"><td colspan="11"><div id="4" style="display:none"></div></td></tr>
+			
+				
+				
+				<tr class="odd">
+					<td style="text-align: left">
+							<a href="?op=historyGraph&domain=Cat&date=20121023&ip=All&reportType=day&type=ModelService&startDate=20121023&endDate=20121024" class="history_graph_link" data-status="5">[:: show ::]</a>
+							<a href="?op=history&domain=Cat&date=20121023&ip=All&reportType=day&type=ModelService&startDate=20121023&endDate=20121024">ModelService</a></td>
+					<td>1,747,841</td>
+					<td>553</td>
+					<td>0.03%</td>
+					<td><a	href="/cat/r/m/Cat-0a010625-375265-6486?domain=Cat">Log View</a></td>
+					<td>0</td>
+					<td>18379.9</td>
+					<td>3.2</td>
+					<td>15.7</td>
+					<td>39.4</td>
+					<td>20.2</td>
+				</tr>
+				<tr class="graphs"><td colspan="11"><div id="5" style="display:none"></div></td></tr>
+			
+				
+				
+				<tr class="even">
+					<td style="text-align: left">
+							<a href="?op=historyGraph&domain=Cat&date=20121023&ip=All&reportType=day&type=URL&startDate=20121023&endDate=20121024" class="history_graph_link" data-status="6">[:: show ::]</a>
+							<a href="?op=history&domain=Cat&date=20121023&ip=All&reportType=day&type=URL&startDate=20121023&endDate=20121024">URL</a></td>
+					<td>1,657,322</td>
+					<td>0</td>
+					<td>0.00%</td>
+					<td><a	href="/cat/r/m/Cat-0a010625-375256-1?domain=Cat">Log View</a></td>
+					<td>0</td>
+					<td>112121</td>
+					<td>2.2</td>
+					<td>3.4</td>
+					<td>102.3</td>
+					<td>19.2</td>
+				</tr>
+				<tr class="graphs"><td colspan="11"><div id="6" style="display:none"></div></td></tr>
+			
+				
+				
+				<tr class="odd">
+					<td style="text-align: left">
+							<a href="?op=historyGraph&domain=Cat&date=20121023&ip=All&reportType=day&type=MVC&startDate=20121023&endDate=20121024" class="history_graph_link" data-status="7">[:: show ::]</a>
+							<a href="?op=history&domain=Cat&date=20121023&ip=All&reportType=day&type=MVC&startDate=20121023&endDate=20121024">MVC</a></td>
+					<td>4,971,966</td>
+					<td>0</td>
+					<td>0.00%</td>
+					<td><a	href="/cat/r/m/Cat-0a010625-375256-1?domain=Cat">Log View</a></td>
+					<td>0</td>
+					<td>112113.3</td>
+					<td>0.7</td>
+					<td>1.5</td>
+					<td>59.1</td>
+					<td>57.5</td>
+				</tr>
+				<tr class="graphs"><td colspan="11"><div id="7" style="display:none"></div></td></tr>
+			
+		
+		
+	
+</table>
+
+<font color="white">8</font>
+
+	
+
+</br>
+<script src="/cat/js/transaction.js" type="text/javascript"></script>
+<table class="footer">
+		<tr>
+			<td>[ end ]</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+</html>

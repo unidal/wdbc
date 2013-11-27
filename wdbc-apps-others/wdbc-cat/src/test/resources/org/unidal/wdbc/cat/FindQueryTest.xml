@@ -1,0 +1,30 @@
+<plexus>
+   <components>
+      <component>
+         <role>org.unidal.wdbc.WdbcQuery</role>
+         <role-hint>domain</role-hint>
+         <implementation>org.unidal.wdbc.FindQuery</implementation>
+         <configuration>
+            <words>
+               <word name="domain">MobileApi</word>
+               <word name="domain">UserWeb</word>
+            </words>
+         </configuration>
+      </component>
+      <component>
+         <role>org.unidal.wdbc.WdbcQuery</role>
+         <role-hint>transaction</role-hint>
+         <implementation>org.unidal.wdbc.FindQuery</implementation>
+         <configuration>
+            <words>
+               <word name="type">URL</word>
+               <word name="type">SQL</word>
+               <word name="total">1,657,322</word>
+               <word name="total">194,069</word>
+               <word name="failure">553</word>
+               <word name="avg">63.3</word>
+            </words>
+         </configuration>
+      </component>
+   </components>
+</plexus>

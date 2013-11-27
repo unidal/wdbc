@@ -1,0 +1,147 @@
+<plexus>
+	<components>
+		<component>
+			<role>org.unidal.wdbc.http.Session</role>
+			<implementation>org.unidal.wdbc.http.impl.DefaultSession</implementation>
+			<configuration>
+				<headers>
+					<header name="User-Agent">Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; Maxthon; .NET CLR 1.1.4322)</header>
+				</headers>
+			</configuration>
+		</component>
+		<component>
+			<role>org.unidal.wdbc.cat.Configuration</role>
+			<implementation>org.unidal.wdbc.cat.Configuration</implementation>
+			<configuration>
+				<config>config.xml</config>
+			</configuration>
+		</component>
+		<component>
+			<role>org.unidal.wdbc.http.Processor</role>
+			<implementation>org.unidal.wdbc.cat.Processor</implementation>
+			<requirements>
+				<requirement>
+					<role>org.unidal.wdbc.cat.Configuration</role>
+				</requirement>
+			</requirements>
+		</component>
+		<component>
+			<role>org.unidal.wdbc.http.Flow</role>
+			<implementation>org.unidal.wdbc.http.impl.DefaultFlow</implementation>
+			<configuration>
+				<handler query="page-links" interval="2">
+					<page name="list"/>
+					<handler query="list" interval="2">
+						<page name="details"/>
+						<handler query="details">
+							<processor name="default"/>
+						</handler>
+					</handler>
+				</handler>
+			</configuration>
+		</component>
+		<component>
+			<role>org.unidal.wdbc.WdbcQuery</role>
+			<role-hint>page-links</role-hint>
+			<implementation>org.unidal.wdbc.cat.PageLinksQuery</implementation>
+			<configuration>
+				<uriPattern>http://{2}.baixing.com/{0}/?page={1}</uriPattern>
+			</configuration>
+			<requirements>
+				<requirement>
+					<role>org.unidal.wdbc.cat.Configuration</role>
+				</requirement>
+			</requirements>
+		</component>
+		<component>
+			<role>org.unidal.wdbc.http.Request</role>
+			<role-hint>domain</role-hint>
+			<implementation>org.unidal.wdbc.http.impl.FormRequest</implementation>
+			<configuration>
+				<action>${page-links:link}</action>
+			</configuration>
+		</component>
+		<component>
+			<role>org.unidal.wdbc.WdbcQuery</role>
+			<role-hint>domain</role-hint>
+			<implementation>org.unidal.wdbc.SelectQuery</implementation>
+			<configuration>
+				<paths>
+					<path name="domain">html.body.div[2].table[2].tr.td.div.a[*]</path>
+				</paths>
+			</configuration>
+			<requirements>
+				<requirement>
+					<role>org.unidal.wdbc.query.WdbcFilter</role>
+					<role-hint>domain</role-hint>
+				</requirement>
+			</requirements>
+		</component>
+		<component>
+			<role>org.unidal.wdbc.query.WdbcFilter</role>
+			<role-hint>domain</role-hint>
+			<implementation>org.unidal.wdbc.cat.DomainFilter</implementation>
+		</component>
+		<component>
+			<role>org.unidal.wdbc.http.Request</role>
+			<role-hint>transaction</role-hint>
+			<implementation>org.unidal.wdbc.http.impl.FormRequest</implementation>
+			<configuration>
+				<action>${page-links:link}</action>
+			</configuration>
+		</component>
+		<component>
+			<role>org.unidal.wdbc.WdbcQuery</role>
+			<role-hint>transaction</role-hint>
+			<implementation>org.unidal.wdbc.SelectQuery</implementation>
+			<configuration>
+				<paths>
+					<path name="type">html.body.table[5].tr[*].td.a[2]</path>
+					<path name="total">html.body.table[5].tr[*].td[2]</path>
+					<path name="failure">html.body.table[5].tr[*].td[3]</path>
+					<path name="avg">html.body.table[5].tr[*].td[8]</path>
+				</paths>
+			</configuration>
+			<requirements>
+				<requirement>
+					<role>org.unidal.wdbc.query.WdbcFilter</role>
+					<role-hint>transaction</role-hint>
+				</requirement>
+			</requirements>
+		</component>
+		<component>
+			<role>org.unidal.wdbc.query.WdbcFilter</role>
+			<role-hint>transaction</role-hint>
+			<implementation>org.unidal.wdbc.cat.TransactionFilter</implementation>
+		</component>
+		<component>
+			<role>org.unidal.wdbc.http.Request</role>
+			<role-hint>details</role-hint>
+			<implementation>org.unidal.wdbc.http.impl.FormRequest</implementation>
+			<configuration>
+				<action>${list:link}</action>
+			</configuration>
+		</component>
+		<component>
+			<role>org.unidal.wdbc.WdbcQuery</role>
+			<role-hint>details</role-hint>
+			<implementation>org.unidal.wdbc.SelectQuery</implementation>
+			<configuration>
+				<paths>
+					<path name="desc">p[*].*text</path>
+				</paths>
+			</configuration>
+			<requirements>
+				<requirement>
+					<role>org.unidal.wdbc.query.WdbcFilter</role>
+					<role-hint>details</role-hint>
+				</requirement>
+			</requirements>
+		</component>
+		<component>
+			<role>org.unidal.wdbc.query.WdbcFilter</role>
+			<role-hint>details</role-hint>
+			<implementation>org.unidal.wdbc.cat.DetailsFilter</implementation>
+		</component>
+	</components>
+</plexus>
